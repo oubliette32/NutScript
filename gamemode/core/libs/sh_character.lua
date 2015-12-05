@@ -322,14 +322,9 @@ do
 	})
 
 	nut.char.registerVar("class", {
-		isLocal = true,
-		noDisplay = true,
-		onSet = function(character, class)
-			character:setVar("class", class)
-		end,
-		onGet = function(character, default)
-			return character:getVar("class", default)
-		end
+		field = "_class",
+		isLocal = false,
+		noDisplay = true
 	})
 
 	nut.char.registerVar("faction", {
